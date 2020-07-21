@@ -3,7 +3,8 @@ Analyzing GHArchive KPIs using Pyspark
 
 I had an amazing opportunity to work on GHArchive data (https://www.gharchive.org/) where I analyzed one day raw data of Github. The analysis is for 13th July 2020 using PySpark. The codes to analyse this data has been written in DataBricks Community Edition and the GHArchive_Data_Analysis.py file attached to this repository can be used to run those codes there.
 
-Created ETL pipeline for this project
+**Created ETL pipeline for this project
+
 Extracted data from GHarchive ------> Transformed the data in PySpark -------> Load the target data in AWS-S3 bucket for day-to-day pipeline
 
 I followed the following steps to get the analysis done:
