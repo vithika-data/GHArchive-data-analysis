@@ -1,7 +1,10 @@
 # GHArchive-data-analysis
 Analyzing GHArchive KPIs using Pyspark 
 
-I had an amazing opportunity to work on GHArchive data where I analyzed one day raw data of Github. The analysis is for 13th July 2020 using Spark. The codes to analyse this data has been written in DataBricks Community Edition and the .py file attached to this repository can be used to run those codes there.
+I had an amazing opportunity to work on GHArchive data (https://www.gharchive.org/) where I analyzed one day raw data of Github. The analysis is for 13th July 2020 using PySpark. The codes to analyse this data has been written in DataBricks Community Edition and the GHArchive_Data_Analysis.py file attached to this repository can be used to run those codes there.
+
+Created ETL pipeline for this project
+Extracted data from GHarchive ------> Transformed the data in PySpark -------> Load the target data in AWS-S3 bucket for day-to-day pipeline
 
 I followed the following steps to get the analysis done:
 - Extracting data files from GHarchive
@@ -9,7 +12,7 @@ I followed the following steps to get the analysis done:
 - Understanding the data
 - Analysing the data with a problem statement
 - Data Visualisation
-- Importing the data into S3 bucket for day-to-day pipeline analysis
+- Exported dataframe with relevant fields into S3 bucket(where business can create a trigger using AWS lambda) for day-to-day pipeline analysis
 
 ## Extracting the data files from GHArchive
 - Used wget command to download the data for a day
@@ -18,9 +21,9 @@ I followed the following steps to get the analysis done:
 
 ## Processing the Data
 - I created a Spark.Session and I read all the json data in one single data frame
-- This process, though fairly straightforward, actually took some time since the intial data I downloaded had a corrupt hourly file which was not readable. I then decided to get data for another date to proceed with the analysis
-- Changed a string data containing dates into datetime column to analyse the results on hourly level
-- Then, I cached my data for faster code implementation
+- This process, though fairly straightforward, actually took some time since the file I downloaded at first( for Date: 17th July 2020), contained a corrupt hourly file which was not readable. I then decided to get data for another date(Date: 13th July 2020) to proceed with the analysis
+- I changed a string data containing dates into datetime column to analyse the results on hourly level
+- Then, I cached my data for faster code execution
 
 ## Understanding the Data
 - This took most of my time since the schema of the json data is fairly large and nested. 
@@ -37,5 +40,6 @@ I followed the following steps to get the analysis done:
   - Created charts based on the filtered data from each visualizations
   - Created a google presentation : https://docs.google.com/presentation/d/1JAAPCznVMUEttWROyrISgTXyGieDKmN5FsDsNSmMzDI/edit?usp=sharing 
   
-  ## Importing the data to S3 bucket
+  ## Loaded the data to S3 bucket
+  - Exported dataframe with relevant fields into S3 bucket(where business can create a trigger using AWS lambda) for day-to-day pipeline analysis
   
