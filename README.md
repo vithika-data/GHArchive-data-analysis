@@ -33,5 +33,9 @@ I followed the following steps to get the analysis done:
   - How many issues were raised per hour in a day?
   - How many issues were opened and closed per hour in a day?
   
-  ## Data Visualisation
+  ## Data Visualisation and Presentation
   - Created charts based on the filtered data from each visualizations
+  - Created a google presentation : https://docs.google.com/presentation/d/1JAAPCznVMUEttWROyrISgTXyGieDKmN5FsDsNSmMzDI/edit?usp=sharing 
+  
+  ## Importing the data to S3 bucket
+  
